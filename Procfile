@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apache2 Megalopolis-master/
+web: vendor/bin/heroku-php-apache2 web/
