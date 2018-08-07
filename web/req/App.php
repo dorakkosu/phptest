@@ -36,7 +36,7 @@ class App
 		if ($desc == null)
 		{
 			self::precondition(version_compare(PHP_VERSION, "5.2.5", ">="), "PHP 5.2.5");
-			self::precondition(extension_loaded("mbstring"), "mbstring");
+			//self::precondition(extension_loaded("mbstring"), "mbstring");
 			self::precondition(extension_loaded("pdo"), "PDO");
 			self::precondition(in_array(Util::HASH_ALGORITHM, hash_algos()), "hash_algos() " . Util::HASH_ALGORITHM);
 
