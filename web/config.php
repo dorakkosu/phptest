@@ -142,8 +142,8 @@ $config->mysqlSearchUseHeadMatching = true;
 // - new SQLiteDataStore()			SQLite を使用して、ファイルにデータを保存します。デフォルトでは store/ ディレクトリに保存されます。
 // - new SQLiteDataStore("foo/")	SQLite を使用して、ファイルにデータを保存します。この場合 foo/ ディレクトリに保存されます。
 // - new MySQLDataStore(...)		MySQL を使用して、データベースにデータを保存します。詳細については以下の例を参照してください。
-//$config->dataStore = new SQLiteDataStore();new MySQLDataStore("データベース名", array("ホスト名", ポート), "ユーザ名", "パスワード")
-$config->dataStore = new MySQLDataStore("heroku_08e48c8558c6244", array("us-cdbr-iron-east-01.cleardb.net", 3306), "b626ec494dd99d", "c8da62c6")
+//$config->dataStore = new SQLiteDataStore();
+$config->dataStore = new MySQLDataStore("heroku_08e48c8558c6244", array("us-cdbr-iron-east-01.cleardb.net", 3306), "b626ec494dd99d", "c8da62c6");
 // MySQL を使用する場合は、以下のいずれかの形式に設定してください
 // - new MySQLDataStore("データベース名", array("ホスト名", 3306), "ユーザ名", "パスワード");
 // - new MySQLDataStore("データベース名", "UNIX ソケットパス", "ユーザ名", "パスワード");
