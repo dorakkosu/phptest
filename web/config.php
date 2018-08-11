@@ -7,7 +7,7 @@ $config = &Configuration::$instance;
  */
 
 // タイトル
-$config->title = "Megalopolis";
+$config->title = "創世のromroom";
 
 // 管理者パスワード (ハッシュ)
 // テストモードの「管理者パスワード用ハッシュ算出」を使用して得た任意のパスワードのハッシュを指定します。
@@ -354,7 +354,7 @@ $config->head = trim
 // 作品一覧表示時に作品集一覧の上に表示されるお知らせ (HTML)
 $config->notes = trim
 ('
-	Hello!
+	ゆっくりしていってね！
 ');
 
 // フッターにバージョン情報を表示するか (true/false)
