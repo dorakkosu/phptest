@@ -34,8 +34,8 @@ class Auth
 			session_set_cookie_params(0, dirname(Util::getPhpSelf()));
 			session_name($sessionName);
 			
-			if (Configuration::$instance->storeSessionIntoDataStore)
-				SessionStore::useSessionStore();
+			//if (Configuration::$instance->storeSessionIntoDataStore)
+				//SessionStore::useSessionStore();
 			
 			$redis = new Predis\Client(getenv('REDIS_URL'));
 			$sessHandler = new RedisSessionHandler($redis);
