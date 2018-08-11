@@ -12,9 +12,9 @@ $config->title = "創世のromroom";
 // 管理者パスワード (ハッシュ)
 // テストモードの「管理者パスワード用ハッシュ算出」を使用して得た任意のパスワードのハッシュを指定します。
 // 既定のパスワードは passwd になっています。必ず変更することを推奨します。
-$config->adminHash = "109823e01afb58706d9c0e40062a505c00d814235a9900ae2f16c3e5f90d07d8895196ac33a87ac6a43ffd56ff6338378b626dd01df4e53102db7";
+//$config->adminHash = "109823e01afb58706d9c0e40062a505c00d814235a9900ae2f16c3e5f90d07d8895196ac33a87ac6a43ffd56ff6338378b626dd01df4e53102db7";
 // 推奨されませんが、ハッシュではなく以下のように平文でパスワードを設定することも可能です。
-// $config->adminHash = Util::hash("passwd");
+$config->adminHash = Util::hash("passwd");
 
 // 管理用設定ツールが使用可能か (true/false)
 // 詳細については、readme.txt を参照してください。
