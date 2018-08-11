@@ -1,7 +1,7 @@
 <?php
 
-require_once 'app/vendor/RedisSessionHandler.php';
-require_once 'app/vendor/predis/predis/src/Client.php';
+require_once '/app/vendor/RedisSessionHandler.php';
+require_once '/app/vendor/predis/predis/src/Client.php';
 
 class Auth
 {
