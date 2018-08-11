@@ -1,4 +1,8 @@
 <?php
+
+require_once 'app/vendor/RedisSessionHandler.php';
+require_once 'app/vendor/predis/predis/src/Client.php';
+
 class Auth
 {
 	const SESSION_PASSWORD = "Auth_password";
@@ -31,6 +35,10 @@ class Auth
 			
 			if (Configuration::$instance->storeSessionIntoDataStore)
 				SessionStore::useSessionStore();
+				
+			$redis = new Predis\Client(getenv('REDIS_URL'));
+			$sessHandler = new RedisSessionHandler($redis);
+			session_set_save_handler($sessHandler);
 			
 			session_start();
 			
