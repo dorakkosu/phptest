@@ -14,8 +14,8 @@ define("DEFAULT_HANDLER", "index");
 define("DEFAULT_ACTION", "index");
 define("SQL_DEBUG", false);
 
-require_once( dirname(__FILE__). "../vendor/autoload.php" );
-require_once( dirname(__FILE__). "../RedisSessionHandler.php" );
+require_once( "../vendor/autoload.php" );
+require_once( "../RedisSessionHandler.php" );
 
 $redis = new Predis\Client([
     'host' => parse_url($_ENV['REDIS_URL'], PHP_URL_HOST),
