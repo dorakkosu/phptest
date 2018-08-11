@@ -1,11 +1,13 @@
 <?php
+require_once '/app/vendor/predis/predis/autoload.php';
+Predis\Autoloader::register();
 class RedisSessionHandler implements SessionHandlerInterface
 {
     public $ttl = 1800; // 30 minutes default
     protected $db;
     protected $prefix;
  
-    public function __construct(PredisClient $db, $prefix = 'PHPSESSID:') {
+    public function __construct(Predis\Client $db, $prefix = 'PHPSESSID:') {
         $this->db = $db;
         $this->prefix = $prefix;
     }
