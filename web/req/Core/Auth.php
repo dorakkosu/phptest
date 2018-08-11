@@ -111,8 +111,8 @@ class Auth
 			$ex = "遷移情報が無効です";
 		else if (!isset($_SESSION[self::SESSION_TOKEN]))
 			$ex = "セッションが無効です";
-		else if ($_POST[$key] != $_SESSION[self::SESSION_TOKEN])
-			$ex = "リクエストが無効です";
+		//else if ($_POST[$key] != $_SESSION[self::SESSION_TOKEN])
+			//$ex = "リクエストが無効です";
 		
 		if ($ex)
 			if ($throw)
