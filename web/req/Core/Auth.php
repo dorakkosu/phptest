@@ -1,7 +1,7 @@
 <?php
 
 require_once '/app/vendor/RedisSessionHandler.php';
-require 'Predis/Autoloader.php';
+require_once '/app/vendor/predis/predis/autoload.php';
 Predis\Autoloader::register();
 
 class Auth
