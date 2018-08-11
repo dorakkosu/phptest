@@ -31,6 +31,8 @@ class Auth
 			
 			if (Configuration::$instance->storeSessionIntoDataStore)
 				SessionStore::useSessionStore();
+				
+			require_once __DIR__ . '/RedisSessionHandler.php';
 
 			$redis = new Predis\Client([
 			    'host' => parse_url($_ENV['REDIS_URL'], PHP_URL_HOST),
