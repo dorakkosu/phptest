@@ -104,7 +104,7 @@ class Auth
 	static function ensureToken($key = "token", $throw = true)
 	{
 		$ex = null;
-		/*
+		
 		if (!isset($_COOKIE[session_name()]))
 			$ex = "セッション ID がセットされていません";
 		else if (!isset($_POST[$key]))
@@ -113,7 +113,6 @@ class Auth
 			$ex = "セッションが無効です";
 		else if ($_POST[$key] != $_SESSION[self::SESSION_TOKEN])
 			$ex = "リクエストが無効です";
-		*/
 		
 		if ($ex)
 			if ($throw)
